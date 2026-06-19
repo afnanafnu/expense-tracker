@@ -1,0 +1,19 @@
+/* ---------- Sidebar footer ---------- */
+.sidebar__footer {
+    padding: 16px 12px;
+    border-top: 1px solid var(--ink-line);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+    .sidebar__footer {
+        flex-direction: row;
+        padding: 8px 12px;
+        border-top: none;
+        border-left: 1px solid var(--ink-line);
+        margin-left: auto;
+    }
+}

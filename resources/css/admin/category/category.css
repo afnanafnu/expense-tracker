@@ -1,0 +1,35 @@
+.icon-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* EDIT BUTTON (BLUE) */
+.icon-btn--edit {
+    background-color: #887800;
+    color: #fff;
+}
+
+#addCategory{
+    background-color: var(--gold);
+    color: black;
+}
+
+.icon-btn--edit:hover {
+    background-color: #b39e07;
+}
+
+/* DELETE BUTTON (RED) */
+.icon-btn--danger {
+    background-color: #a71313;
+    color: #fff;
+}
+
+.icon-btn--danger:hover {
+    background-color: #b91c1c;
+}

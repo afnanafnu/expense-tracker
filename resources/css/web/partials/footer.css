@@ -1,0 +1,12 @@
+/* ---------- Footer ---------- */
+footer {
+    border-top: 1px solid var(--ink-line);
+    padding: 28px 0 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.82rem;
+    color: var(--muted);
+    flex-wrap: wrap;
+    gap: 10px;
+}

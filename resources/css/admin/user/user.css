@@ -1,0 +1,132 @@
+.icon-btn {
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* EDIT BUTTON (BLUE) */
+.icon-btn--edit {
+    background-color: #887800;
+    color: #fff;
+}
+
+.icon-btn--edit:hover {
+    background-color: #b39e07;
+}
+
+/* DELETE BUTTON (RED) */
+.icon-btn--danger {
+    background-color: #a71313;
+    color: #fff;
+}
+
+.icon-btn--danger:hover {
+    background-color: #b91c1c;
+}
+
+/* ── Scope all DataTable overrides to this page's table ── */
+
+/* Kill DataTable's own wrapper padding/bg */
+#usersTable_wrapper {
+    background: transparent;
+    padding: 0;
+}
+
+/* Controls: length + filter — place them above the card */
+#usersTable_wrapper .dataTables_length,
+#usersTable_wrapper .dataTables_filter {
+    margin-bottom: 14px;
+}
+
+/* Put length on left, filter on right */
+#usersTable_wrapper .dataTables_length {
+    float: left;
+}
+
+#usersTable_wrapper .dataTables_filter {
+    float: right;
+}
+
+#usersTable_wrapper::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+/* Make the table fill the card cleanly */
+#usersTable {
+    width: 100% !important;
+}
+
+/* Header — use your cream style but consistent */
+#usersTable thead th {
+    background: var(--cream);
+    color: #6c7b71;
+    border-bottom: 2px solid var(--paper-edge) !important;
+    border-top: none !important;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 12px 22px;
+    white-space: nowrap;
+}
+
+/* Body cells — match admin-table td */
+#usersTable tbody td {
+    background: var(--paper);
+    color: var(--ink-on-paper);
+    padding: 14px 22px;
+    border-bottom: 1px dotted var(--paper-edge) !important;
+    font-size: 0.88rem;
+    vertical-align: middle;
+}
+
+#usersTable tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+#usersTable tbody tr:hover td {
+    background: rgba(0, 0, 0, 0.025);
+}
+
+/* Strip DataTable's default striping/borders */
+table.dataTable.no-footer {
+    border-bottom: none !important;
+}
+
+/* Info + pagination sit below the card */
+#usersTable_wrapper .dataTables_info,
+#usersTable_wrapper .dataTables_paginate {
+    padding: 14px 22px;
+    background: var(--paper);
+    border-top: 1px dashed var(--paper-edge);
+}
+
+#usersTable_wrapper .dataTables_info {
+    float: left;
+    font-size: 0.82rem;
+    color: #6c7b71;
+    padding-top: 17px;
+}
+
+#usersTable_wrapper .dataTables_paginate {
+    float: right;
+}
+
+/* Wrap info+paginate in a flex row */
+#usersTable_wrapper .dataTables_info,
+#usersTable_wrapper .dataTables_paginate {
+    border-radius: 0 0 var(--radius) var(--radius);
+}
+
+/* Clear float after bottom controls */
+#usersTable_wrapper .dataTables_info + .dataTables_paginate,
+#usersTable_wrapper > div:last-child {
+    overflow: hidden; /* clearfix */
+}

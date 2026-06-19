@@ -1,0 +1,35 @@
+
+/* ---------- Sidebar brand / header ---------- */
+.sidebar__brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding: 22px 20px 18px;
+    font-family: 'Fraunces', serif;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--cream);
+    border-bottom: 1px solid var(--ink-line);
+    text-decoration: none;
+}
+
+.sidebar__badge {
+    margin-left: auto;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background-color: var(--gold);
+    color: #1c1006;
+    padding: 2px 7px;
+    border-radius: 999px;
+    font-weight: 700;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 720px) {
+    .sidebar__brand {
+        border-bottom: none;
+        padding: 14px 16px;
+    }
+}
