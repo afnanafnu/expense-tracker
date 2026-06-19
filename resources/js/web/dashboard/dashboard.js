@@ -92,11 +92,17 @@ $(function () {
             $methodField.val('PUT');
 
             $form.find('#title').val($btn.data('title'));
-            $form.find('#category').val($btn.data('category'));
+
+            $form.find('#category')
+                .val($btn.data('category'))
+                .trigger('change');
+
             $form.find('#amount').val($btn.data('amount'));
             $form.find('#transaction_date').val($btn.data('date'));
             $form.find('#description').val($btn.data('description'));
-            $form.find('input[name="type"][value="' + $btn.data('type') + '"]').prop('checked', true);
+
+            $form.find('input[name="type"][value="' + $btn.data('type') + '"]')
+                .prop('checked', true);
         } else {
             resetToCreate();
         }
